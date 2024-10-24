@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add (num1, num2){
+            return num1 + num2
+        }
+        console.log(add(3,9))
+
+        const sub = function(num1, num2){
+            return num1 - num2
+        }
+        console.log(sub(3,9))
+
+        const greet = function (arg = 'default'){
+            return `hi ${arg}`
+        }
+        console.log(greet())
+        console.log(greet('name'))
+        
+        const func1 = function(param1, param2, ...restParams){
+            return [param1, param2, restParams]
+        }
+        console.log(func1(1,2,3,4,5))
+        console.log(func1(1,2))
+
+        const arrow1 = function (name) {
+
+        }
+        const arrow2 = (name) =>{
+            return `hello ${name}`
+        }
+
+        const arrow3 = name => {
+            return `hello ${name}`
+        }
+        
+        const arrow4 = name => `hello ${name}`
+        console.log(arrow2('zz'))
+        console.log(arrow3('zz'))
+        console.log(arrow4('zz'))
+
+    </script>
+</body>
+</html>

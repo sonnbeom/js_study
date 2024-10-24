@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>DOM 요소 조작</p>
+    </div>
+
+    <script>
+        const pTag = document
+        
+        let t = 0
+
+        while(t < 5){
+            console.log(t)
+            t++
+        }
+
+        for(let i = 0; i < 6; i++){
+            console.log(i)
+        }
+
+        const datas ={
+            a : "data1", 
+            b: 'data2'
+        }
+        for(const key in datas){
+            console.log(key)
+            console.log(datas[key])
+        }
+        const numburs = [0,1,2,3]
+
+        for(const number of numburs){
+            console.log(number)
+        }
+        const str = 'apple'
+        for(const char of str){
+            console.log(char)
+        }
+        // for in 모두 가능 속성을 기준으로 가져옴 {0:0 1:1 2:2} 인덱스가 속성 딕셔너리는 key가 속성
+        // for of 객체는 안 됨 순서가 없으니까
+        //for in 나열된 것을 반복문을 돌기 때문에 딕셔너리와 같은 객체를 돌아야함
+        // for of 순서가 있는 배열 객체가 아닌 거
+        
+         
+    </script>
+</body>
+</html>
