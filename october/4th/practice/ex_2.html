@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class = 'head'> head </h1>
+    <a href="https://www.naver.com">naver</a>
+    <p class="content">conten1</p>
+    <p class="content">conten2</p>
+    <p class="content">conten3</p>
+
+    <script>
+        const classHead = document.querySelector('.head')
+        console.log(classHead)
+        console.log(classHead.classList)
+
+        classHead.classList.add('red')
+        console.log(classHead.classList)
+
+        classHead.remove('red')
+        console.log(classHead.classList)
+
+        classHead.classList.toggle('red')
+        console.log(classHead.classList)
+
+        const aTagToNaver = document.querySelector('a')
+        console.log(aTagToNaver)
+        console.log(aTagToNaver.getAttribute('href'))
+
+        aTagToNaver.setAttribute('href', 'https://www.google.com/')
+        console.log(aTagToNaver)
+        
+        aTagToNaver.removeAttribute('href')
+        console.log(aTagToNaver.getAttribute('href'))
+        aTagToNaver.setAttribute('href', 'https://www.naver.com/')
+        console.log(aTagToNaver.getAttribute('href'))
+    </script>
+</body>
+</html>

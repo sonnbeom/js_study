@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const user = {
+            name : 'sonny',
+            'name tag': true,
+            getName: function(req){
+                return `hello ${this.name} ${req}`
+            }
+        }
+        console.log(user.name)
+        console.log(user['name tag'])
+        console.log(user.getName('bon'))
+
+        user.country = 'korea'
+        
+        user.name = '승범'
+        console.log(user)
+
+        delete user.name
+        console.log(user)
+
+        console.log('name tag' in user)
+        console.log('name' in user)
+        
+
+    </script>
+</body>
+</html>

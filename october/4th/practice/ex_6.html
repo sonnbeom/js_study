@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        name = '전역 이름'
+
+        const user = {
+            name : 'sonny',
+            'key with space': true,
+            getUserName: (arg) => {
+                return `hi ${this.name} arg : ${arg}`
+            },
+            getUserName_v2: function(arg) {
+                return `hi ${this.name} arg : ${arg}`
+            }
+            // function 명시한 경우: this가 호출된 객체의 필드값 호출
+            // arrow : this??
+        }
+        console.log(user.name)
+        console.log(user['key with space'])
+        
+        console.log(user.getUserName('beom'))
+        console.log(user.getUserName_v2('beom'))
+
+        user.country = 'korea'
+        user.name = '승범'
+        console.log(user)
+
+        delete user.name
+        console.log(user)
+
+        if ('country' in  user){
+            console.log(true)
+        }else{
+            console.log(false)
+        }
+
+    </script>
+</body>
+</html>

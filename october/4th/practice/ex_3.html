@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Dom입니다만?</p>
+    </div>
+
+    <script>
+        // dom 생성
+        const newH1Tag = document.createElement('h1')
+        console.log(newH1Tag)
+        newH1Tag.textContent = '제목'
+        console.log(newH1Tag)
+
+        // dom 추가
+        const divTag = document.querySelector('div')
+        divTag.appendChild(newH1Tag)
+        console.log(divTag)
+
+        // dom 제거
+        const pTag = document.querySelector('p')
+        divTag.removeChild(pTag)
+        console.log(divTag)
+        console.log(newH1Tag)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const age = 30
+
+        // const user1 = {
+        //     name: name,
+        //     age: age
+        // }
+
+        // const user2 = {
+        //     name,
+        //     age
+        // }
+        
+        const obj1 = {
+            greeting: function () {
+                return 'hi'
+            }
+        }
+
+        const obj2 = {
+            greeting() {
+                return 'hi'
+            }
+        }
+        // console.log(obj1.greeting())
+        // console.log(obj2.greeting())
+
+        // const product = prompt('입력해라 닝겐')
+        // const firstKey = 'first '
+        // const secondKey = 'second'
+
+        // const example = {
+        //     [product] : 5,
+        //     [firstKey + secondKey] : age
+        // }
+        // console.log(example)
+
+
+        // 구조 분해 할당
+        const userInfo = {
+            name: '승범',
+            address: '강서구',
+            email: 'email'
+        }
+        
+
+        const {email, address, name} = userInfo
+        console.log(name, address, email)
+
+        const printUserInfo = ({name, address, email}) => {
+            console.log(`이름 :${name} 나이: ${age} 주소: ${address}`)
+        }
+
+        printUserInfo(userInfo)
+
+        const printUserInfo_v2 = (name, address, email) => {
+            console.log(`이름 :${name} 나이: ${age} 주소: ${address}`)
+        }
+        printUserInfo_v2(name, email, address)
+
+        const printUser = ({name, address, email}) => {
+            console.log(`이름 ${name} 주소 : ${address} email : ${email}`)
+        }
+        printUser(userInfo)
+
+        const obj = {
+            b: 2,
+            c: 3,
+            d: 4
+        }
+        const newObj = {
+            a : 1,
+            ...obj,
+            e : 5
+        }
+        console.log(newObj)
+
+        const profile = {
+            name: 'soony',
+            height: 183
+        }
+
+        console.log(Object.keys(profile))
+        console.log(Object.values(profile))
+
+        //json 파싱
+        const jsObject = {
+            coffee: '아아',
+            tea: '보리차'
+        } 
+        //Object to Json 
+        const objToJson = JSON.stringify(jsObject)
+        console.log(objToJson)
+        console.log(typeof objToJson)
+
+        // Json to Object
+        const jsonToObject = JSON.parse(objToJson)
+        console.log(jsonToObject)
+        console.log(typeof jsonToObject)
+
+        
+         
+
+    </script>
+</body>
+</html>

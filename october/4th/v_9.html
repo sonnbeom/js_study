@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers1 = [1,2,3]
+        numbers1.forEach(function (num) {
+            console.log(num)
+        })
+
+        const numbers2 = [4,5,6]
+        const callBack = (num) => {
+            console.log(num)
+        }
+        numbers2.forEach(callBack)
+
+        names = ['s', 'b', 'c']
+        
+        names.forEach((name, idx, arr) => {
+            console.log(name, idx, arr)
+        })
+
+        persons = ['s', 't', 'r']
+        const result1 = persons.map((name) => {
+            return name
+        })
+        console.log(result1)
+        const numbers = [1,2,3]
+        const customCallback = (num) => {
+            return num * 2
+        }
+        const doubleNum = numbers.map(customCallback)
+        console.log(doubleNum)
+
+        const arr = [1,2,3,4,5]
+        
+        // 하나라도 통과하는지 테스트 적어도 하나라도 true라면 true를 반환하고 순환 중지
+        const isEvenNum = arr.some((num) => {
+            console.log(num)
+            return num % 2 === 0
+        })
+
+
+        console.log(isEvenNum)
+        //모두가 통과하는지 테스트
+        const isEveryEvenNum = arr.every((num) => {
+            console.log(num)
+            return num % 2 === 0
+        })
+        console.log(isEveryEvenNum)
+
+        const students = [
+            {name: 'a', score: 10},
+            {name: 'b', score: 20},
+            {name: 'c', score: 30},
+            {name: 'd', score: 40}
+        ]
+
+        let numOfStudents = students.length
+        let sumOfStudents = 0
+
+        students.forEach((student) =>{
+            sumOfStudents += student.score
+        })
+        const result2 = sumOfStudents / numOfStudents
+        console.log(result2)
+
+        
+
+    </script>
+</body>
+</html>
