@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <button id = 'btn'>클릭</button>
+    <input type="text" id = 'text-input'>
+
+    <script>
+        const inputTag = document.querySelector('#text-input')
+        const h1Tag = document.querySelector('h1')
+        
+        const inputHandler = function (evnet) {
+            h1Tag.textContent = evnet.currentTarget.value
+        }
+        inputTag.addEventListener('input', inputHandler)
+        console.log(h1Tag)
+        const btn = document.querySelector('#btn')
+
+        const clickHandler = function (event) {
+            console.log(h1Tag)
+            h1Tag.classList.toggle('blue')
+        }
+        btn.addEventListener('click', clickHandler)
+    </script>
+</body>
+</html>

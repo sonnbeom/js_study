@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이븐하게 중요</h1>
+
+    <script>
+        const h1Tag = document.querySelector('h1')
+        const preventCopyHandler = function (event) {
+            console.log(event)
+            event.preventDefault()
+            alert('복사할 수가 없거덩요')
+        }
+        h1Tag.addEventListener('copy', preventCopyHandler)
+    </script>
+</body>
+</html>
