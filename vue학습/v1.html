@@ -11,6 +11,9 @@
         <button v-on:click="countNumber++">
             카운트 넘버: {{countNumber}}
         </button>
+        <button v-on:click = "increment()">
+            {{ number }}
+        </button>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -21,13 +24,19 @@
             setup(){
                 const message = ref('Hello vue')
                 const countNumber = ref(0)
+                const number = ref(0)
+                const increment = function () {
+                    number.value ++
+                }
                 return {
                     message,
-                    countNumber
+                    countNumber,
+                    increment,
+                    number
                 }
             }
         })
-        app.mount('#app')eeeeeeeee 
+        app.mount('#app')
 
     </script>
 </body>
